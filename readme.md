@@ -41,7 +41,7 @@ A simple chrome extension to auto connect with people on linkedin.
 
 - ### Chrome API
 
-  Chrome's API is what we will be using to interact with our service worker file and content script file. We are using chrome's tab and runtime API in our extension. Tab's API helps us to keep track of the URL of the active tab and runtime API helps us to trigger and response to events in our app or extension lifecycle.
+  Chrome's API is what we will be using to interact with our service worker file and content script file. For our extension we will be using chrome's tab and runtime API. Tab API helps us to keep track of the URL of the active tab and runtime API helps us to trigger and respond to events in our app or extension lifecycle.
 
 - ### Mutation Observer
 
@@ -85,10 +85,10 @@ A simple chrome extension to auto connect with people on linkedin.
   };
   ```
 
-  First we grab the unordered list parent element where all the user rows are filled in. We instantiate a new Mutation Observer to observe any changes in our unordered list element. This is because, the data is fetched dynamically by Linkedin, so we will need to updated our "connectedButtons" global state every time we detect change in the unordered list element.
+  First we grab the unordered list element where all the user rows are filled in. We instantiate a new Mutation Observer to observe any changes in our unordered list element. This is because, the data is fetched dynamically by Linkedin, so we will need to updated our "connectedButtons" global state every time we detect change in the unordered list element.
 
   We are querying all the span elements with the text "connect" and adding the parent element which is the button element in this case to our global state.
 
-  Then we simply create a timer function which will run every 1.5 seconds. It will remove all the buttons from our global state "connectedButtons" and trigger a click event on them.
+  Then we create a timer function which will run every 1.5 seconds. This function remove's one button at time from our global state "connectedButtons" and trigger's a click event on that button element.
 
-  We are also keeping track of other state like "requests" which keeps record of how many requests have been sent which we then render on our UI popup.
+  We are also keeping track of other state like "requests" which keeps track of how many requests have been sent. We then render that number in our UI.
