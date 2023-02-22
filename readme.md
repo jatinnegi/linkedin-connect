@@ -40,3 +40,47 @@ A simple chrome extension to auto connect with people on linkedin.
     Export some helper functions for our popup.js file.
 
 - ### Chrome API
+
+  Chrome's API is what we will be using to interact with our service worker file and content script file. We are using chrome's tab and runtime API in our extension. Tab's API helps us to keep track of the URL of the active tab and runtime API helps us to trigger and response to events in our app or extension lifecycle.
+
+- ### Mutation Observer
+
+  Following is the code snippet we are using to fetch all the connect buttons from a target page
+
+  ```javascript
+  const main = () => {
+    const ul = document.querySelectorAll(
+      ".reusable-search__entity-result-list.list-style-none"
+    )[0];
+
+    try {
+      const obs = new MutationObserver(function (mutations, _) {
+        for (let i = 0; i < mutations.length; i++) {
+          const mutation = mutations[i];
+
+          for (let j = 0; j < mutation.addedNodes.length; j++) {
+            if (
+              mutation.addedNodes[j].nodeName === "SPAN" &&
+              mutation.addedNodes[j].textContent.trim() === "Connect"
+            )
+              connectButtons.push({
+                id: mutation.addedNodes[j].parentElement.id,
+                element: mutation.addedNodes[j].parentElement,
+              });
+          }
+        }
+      });
+
+      obs.observe(ul, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        characterData: true,
+      });
+    } catch {
+      setTimeout(() => {
+        main();
+      }, 500);
+    }
+  };
+  ```
