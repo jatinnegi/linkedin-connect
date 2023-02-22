@@ -84,3 +84,11 @@ A simple chrome extension to auto connect with people on linkedin.
     }
   };
   ```
+
+  First we grab the unordered list parent element where all the user rows are filled in. We instantiate a new Mutation Observer to observe any changes in our unordered list element. This is because, the data is fetched dynamically by Linkedin, so we will need to updated our "connectedButtons" global state every time we detect change in the unordered list element.
+
+  We are querying all the span elements with the text "connect" and adding the parent element which is the button element in this case to our global state.
+
+  Then we simply create a timer function which will run every 1.5 seconds. It will remove all the buttons from our global state "connectedButtons" and trigger a click event on them.
+
+  We are also keeping track of other state like "requests" which keeps record of how many requests have been sent which we then render on our UI popup.
