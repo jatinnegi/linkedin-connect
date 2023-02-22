@@ -23,4 +23,4 @@ A simple chrome extension to auto connect with people on linkedin.
 
 ## Architecture
 
-- # Project Structure
+- ### Project Structure
