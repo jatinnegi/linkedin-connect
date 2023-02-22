@@ -1,4 +1,4 @@
-### Auto-Connect Linkedin
+# Auto-Connect Linkedin
 
 A simple chrome extension to auto connect with people on linkedin.
 
