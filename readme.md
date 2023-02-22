@@ -30,7 +30,7 @@ A simple chrome extension to auto connect with people on linkedin.
 
   - ### ContentScript.js
 
-    This is there where the core logic of our extension is written. It will interact with our background.js and popup.js files using chrome's Tab API. This is where we fetch all the connect buttons when we are on a target page and send connect requests.
+    This is where the core logic of our extension is written. It will interact with our background.js and popup.js files using chrome's API. Here we fetch all the connect buttons when we are on a target page and send our connect requests.
 
   - ### Background.js
 
