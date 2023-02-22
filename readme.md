@@ -1,6 +1,6 @@
-## Auto-Connect Linkedin
+### Auto-Connect Linkedin
 
-A simple chrome extension to connect with people on linkedin.
+A simple chrome extension to auto connect with people on linkedin.
 
 - [How to run](#how-to-run)
 - [Architecture](#architecture)
@@ -12,3 +12,8 @@ A simple chrome extension to connect with people on linkedin.
     - [Utils.js](#utils-js)
   - [Chrome API](#chrome-api)
   - [MutationObserver](#mutation-observer)
+
+## How to run
+
+1. Clone the repo to your local machine
+2. Open your chrome web browser and click on the puzzle icon in the top right side and go to manage extensions.
