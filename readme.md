@@ -5,7 +5,7 @@ A simple chrome extension to auto connect with people on linkedin.
 - [How to run](#how-to-run)
 - [Architecture](#architecture)
   - [Project Structure](#project-structure)
-    - [Manifest.json](#manifest-json)
+    - [Manifest.json](#manifest.json)
     - [Popup.\*](#popup.*)
     - [ContentScript.js](#content-script)
     - [Background.js](#background-js)
@@ -27,7 +27,7 @@ A simple chrome extension to auto connect with people on linkedin.
 
   - ### Manifest.json
 
-    This specifies the name, description, version along with other important information for the our extension.
+    This specifies the name, description, version along with other important information for our extension.
 
   - ### Popup.\*
 
