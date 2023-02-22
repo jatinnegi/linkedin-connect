@@ -6,7 +6,7 @@ A simple chrome extension to auto connect with people on linkedin.
 - [Architecture](#architecture)
   - [Project Structure](#project-structure)
     - [Manifest.json](#manifest-json)
-    - [Popup.\*](#popup-ext)
+    - [Popup.\*](#popup.*)
     - [ContentScript.js](#content-script)
     - [Background.js](#background-js)
     - [Utils.js](#utils-js)
